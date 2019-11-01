@@ -20,7 +20,8 @@ public class SaveScript : MonoBehaviour
     {
         var save = new Save()
         {
-            savedInteger = gameData.GameInteger
+            savedInteger = gameData.GameInteger,
+            savedString = gameData.GameString
         };
 
         var binaryFormatter = new BinaryFormatter();
@@ -46,6 +47,7 @@ public class SaveScript : MonoBehaviour
             }
 
             gameData.GameInteger = save.savedInteger;
+            gameData.GameString = save.savedString;
             gameData.ShowData();
 
             print("Data Loaded");

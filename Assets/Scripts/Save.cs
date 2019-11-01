@@ -6,4 +6,5 @@ using UnityEngine;
 public class Save 
 {
     public int savedInteger;
+    public string savedString;
 }
